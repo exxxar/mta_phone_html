@@ -13,6 +13,8 @@
   background-color: #ff9900;
   cursor: pointer; }
 
+select:focus,
+textarea:focus,
 button:focus,
 input:focus {
   outline: none; }
@@ -29,13 +31,13 @@ input:focus {
   color: white;
   box-sizing: border-box; }
 
-.achievements .footer, .describe-achievement .footer, .cars .footer, .chats .footer, .personal-chat .footer, .reports .footer {
+.main .footer, .achievements .footer, .describe-achievement .footer, .cars .footer, .chats .footer, .personal-chat .footer, .reports .footer {
   display: flex;
   height: 35px;
   width: 100%;
   align-items: center;
   justify-content: space-around; }
-  .achievements .footer:before, .describe-achievement .footer:before, .cars .footer:before, .chats .footer:before, .personal-chat .footer:before, .reports .footer:before {
+  .main .footer:before, .achievements .footer:before, .describe-achievement .footer:before, .cars .footer:before, .chats .footer:before, .personal-chat .footer:before, .reports .footer:before {
     content: '';
     content: '';
     width: 217px;
@@ -44,10 +46,10 @@ input:focus {
     margin-left: 1px;
     background: yellow;
     position: absolute; }
-  .achievements .footer a.btn, .describe-achievement .footer a.btn, .cars .footer a.btn, .chats .footer a.btn, .personal-chat .footer a.btn, .reports .footer a.btn {
+  .main .footer a.btn, .achievements .footer a.btn, .describe-achievement .footer a.btn, .cars .footer a.btn, .chats .footer a.btn, .personal-chat .footer a.btn, .reports .footer a.btn {
     width: 15px;
     height: 15px; }
-    .achievements .footer a.btn img, .describe-achievement .footer a.btn img, .cars .footer a.btn img, .chats .footer a.btn img, .personal-chat .footer a.btn img, .reports .footer a.btn img {
+    .main .footer a.btn img, .achievements .footer a.btn img, .describe-achievement .footer a.btn img, .cars .footer a.btn img, .chats .footer a.btn img, .personal-chat .footer a.btn img, .reports .footer a.btn img {
       width: inherit;
       height: inherit; }
 
@@ -128,8 +130,12 @@ p {
     padding: 10px;
     border-radius: 5px;
     height: 150px;
-    width: 100%;
-    box-sizing: border-box; }
+    width: 210px;
+    box-sizing: border-box;
+    /* max-height: 200px; */
+    /* overflow-y: scroll; */
+    position: relative;
+    margin-top: 5px; }
     .main .info-section .clock p {
       font-size: 35pt;
       text-align: center;
@@ -175,14 +181,19 @@ p {
           .main .info-section .money .row .c3 img {
             width: inherit; }
   .main .center-menu {
-    transform: translateY(-20px); }
+    max-height: 172px;
+    overflow-y: scroll; }
   .main .btn-section {
     padding: 10px 0;
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    width: 100%; }
+    width: 210px;
+    /* max-height: 179px; */
+    /* overflow-y: scroll; */
+    position: relative;
+    /* margin-top: 13px; */ }
     .main .btn-section .btn-wrapper {
       font-size: 8px;
       text-align: center;
@@ -193,8 +204,8 @@ p {
         font-family: Arial, Helvetica, sans-serif;
         text-transform: uppercase; }
     .main .btn-section .btn {
-      width: 69px;
-      height: 69px;
+      width: 65px;
+      height: 65px;
       border-radius: 5px;
       box-shadow: 1px 1px 2px 0px #292929;
       box-sizing: border-box; }
@@ -206,12 +217,15 @@ p {
     .main .btn-section .btn-bordered {
       border: 3px yellow solid;
       background: #292929;
-      width: 63px;
-      height: 63px; }
+      width: 60px;
+      height: 60px; }
   .main .down-menu {
     background-color: rgba(255, 255, 255, 0.6);
     border-radius: 5px;
-    padding: 8px; }
+    padding: 8px;
+    margin-top: 10px; }
+  .main .footer {
+    margin-top: 8px; }
 
 .achievements .body .line {
   display: flex;
